@@ -3,6 +3,7 @@ public class MaxCircularSubArray {
 
 	public static void main(String[] args) {
 		int[] arr = new int[]{11,10,-20,5,-3,-5,8,-13,10};
+		//arr = new int[]{10,-12, 11};
 		System.out.println("Maximum Circular Sub Array sum is "+maxSumCircularArray(arr));
 	}
 	

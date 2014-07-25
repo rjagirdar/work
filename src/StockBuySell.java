@@ -5,7 +5,7 @@ public class StockBuySell {
 
 	public static void main(String[] args) {
 		int[] stockPrices = new int[]{100, 180, 260, 310, 40, 535, 695};
-		stockPrices = new int[]{6,5,4,3,2,1};
+		//stockPrices = new int[]{6,5,4,3,2,1};
 		findStockBuySell(stockPrices);
 	}
 	

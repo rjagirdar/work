@@ -1,8 +1,11 @@
+import java.util.Arrays;
+
 
 public class SmallestPositiveNumberUnsorterd {
 
 	public static void main(String[] args) {
 		int arr[] = {2, 3, 7, 6, 8, -1, -10, 15};
+		findMissing(arr);
 	}
 	
 	public static void swap(int[] arr, int i, int j){
@@ -11,25 +14,25 @@ public class SmallestPositiveNumberUnsorterd {
 		arr[j] = temp;
 	}
 	
-	public static void segregate(int[] arr){
+	public static int segregate(int[] arr){
 		int j=0;
 		int i=-1;
+		
 		while(j<arr.length){
 			if(arr[j] < 0){
 				i++;
 				swap(arr,i,j);
 			}
+			j++;
 		}
+		return i+1;
 	}
 	
 	public static int findMissing(int[] arr){
-		segregate(arr);
+		int partition = segregate(arr);
+		arr = Arrays.copyOfRange(arr, partition, arr.length);
 		int i=0;
-		while(arr[i]<0)
-			i++;
-		for(int j=i; j<arr.length; i++){
-			
-		}
+		
 		return -1;
 	}
 

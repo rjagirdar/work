@@ -4,7 +4,7 @@ import java.util.HashMap;
 public class FindWindow {
 
 	public static void main(String[] args) {
-		String text = "acbbaca";
+		String text = "cacbbaca";
 		String word = "aba";
 		findWindow(text, word);
 	}
@@ -42,7 +42,9 @@ public class FindWindow {
 				
 				char beginChar = src.charAt(begin);
 				while(!needToFind.containsKey(beginChar) || hasFound.get(beginChar) > needToFind.get(beginChar)){
+					
 					if(hasFound.containsKey(beginChar) && needToFind.containsKey(beginChar)){
+					
 						if(hasFound.get(beginChar) > needToFind.get(beginChar)){
 							hasFound.put(beginChar, hasFound.get(beginChar)-1);
 						}

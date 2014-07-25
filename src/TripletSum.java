@@ -9,7 +9,7 @@ public class TripletSum {
 		Arrays.sort(arr);
 		for(ArrayList<Integer> list: findTriplet(arr, 24)){
 			for(int i: list)
-				System.out.println(i+" ");
+				System.out.print(i+" ");
 			System.out.println();
 		}
 	}

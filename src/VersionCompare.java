@@ -3,7 +3,7 @@ public class VersionCompare {
 
 	public static void main(String[] args) {
 		String v1 ="1.0.2.1";
-		String v2 = "1.0.2.2";
+		String v2 = "1.0.2";
 		
 		System.out.println("Greater Version is "+ compareTwoReleaseVersion(v1, v2));
 	}

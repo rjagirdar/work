@@ -7,6 +7,7 @@ public class PetrolPumpProblem {
 	public static void main(String[] args) {
 		ArrayList<PetrolPump> pumps = new ArrayList<PetrolPump>();
 		pumps.add(new PetrolPump(4, 6));
+		pumps.add(new PetrolPump(3, 5));
 		pumps.add(new PetrolPump(6, 5));
 		pumps.add(new PetrolPump(7, 3));
 		pumps.add(new PetrolPump(4, 5));

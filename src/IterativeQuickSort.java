@@ -1,4 +1,5 @@
 
+
 public class IterativeQuickSort {
 
 	public static void main(String[] args) {
@@ -10,9 +11,9 @@ public class IterativeQuickSort {
 	}
 	
 	public static void swap(int[] arr, int i, int j){
-		arr[i] ^= arr[j];
-		arr[j] ^= arr[i];
-		arr[i] ^= arr[j];
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 	
 	public static int partition(int[] arr, int left, int right){
@@ -32,7 +33,7 @@ public class IterativeQuickSort {
 	}
 	
 	public static void quicksort(int[] arr, int l, int h){
-		while(l<h){
+		if(l<h){
 			int partition = partition(arr, l, h);
 			quicksort(arr, l, partition-1);
 			quicksort(arr, partition+1, h);

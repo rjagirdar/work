@@ -4,6 +4,7 @@ public class RobinKarpAlgorithm {
 	public static void main(String[] args) {
 		String text = "ABABDABACDABABCABAB";
 		String pat = "ABABCABAB";
+		kmp(text, pat);
 	}
 	
 	public static void computeLPS(int[] lps, String pat){
