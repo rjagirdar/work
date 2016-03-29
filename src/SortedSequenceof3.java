@@ -3,7 +3,7 @@ public class SortedSequenceof3 {
 
 	public static void main(String[] args) {
 		int[] arr=new int[]{12, 11, 10, 5, 6, 2, 30};
-		arr=new int[]{1, 2, 3, 4};
+		//arr=new int[]{1, 2, 3, 4};
 		SortedSequenceof3(arr);
 	}
 	

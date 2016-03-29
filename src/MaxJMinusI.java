@@ -6,6 +6,12 @@ public class MaxJMinusI {
 		findMaxJMinusI(arr);
 	}
 	
+	private static void printTable(int[] table){
+		for(int val : table)
+			System.out.print(val+" ");
+		System.out.println();
+	}
+	
 	public static void findMaxJMinusI(int[] arr){
 		int[] LMin = new int[arr.length];
 		int[] RMax = new int[arr.length];
@@ -20,7 +26,8 @@ public class MaxJMinusI {
 		for(int j=arr.length-2; j>=0; j--){
 			RMax[j] = Math.max(arr[j], RMax[j+1]);
 		}
-		
+		printTable(LMin);
+		printTable(RMax);
 		int i=0,j=0;
 		int max_length=0;
 		while(i<arr.length && j<arr.length){

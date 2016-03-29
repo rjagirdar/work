@@ -2,7 +2,7 @@
 public class SmallestMissingNumber {
 
 	public static void main(String[] args) {
-		int[] arr = new int[]{0,2,3,4,5,6,7};
+		int[] arr = new int[]{0,1,2,4,5,6,7};
 		System.out.println("Smallest Missing Number is "+smallestMissingNumber(arr));
 	}
 	

@@ -1,17 +1,19 @@
+import java.util.Arrays;
+
 
 public class RepeatingNumbers {
 	public static void main(String[] args){
-		int[] arr= new int[]{1, 2, 3, 1, 3, 6, 6};
+		int[] arr= new int[]{1, 2, 3, 2, 3, 6, 6};
 		printRepeating(arr);
 		
-		arr=new int[]{2, 3, 7,  8, -1, -10, 15, 1, 4,5,};
+		arr=new int[]{2, 3, 7,  8, -1, -10, 15, 4,5,};
 		for(int j: arr)
 			System.out.print(j +" ");
 		int i =segregate(arr);
 		System.out.println();
 		for(int j: arr)
 			System.out.print(j +" ");
-		System.out.println("Missing Number is "+smallestMissingPositiveNumber(arr, i));
+		System.out.println("Missing Number is "+smallestMissingPositiveNumber(Arrays.copyOfRange(arr, i, arr.length-1), i));
 		
 	}
 	

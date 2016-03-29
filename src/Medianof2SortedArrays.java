@@ -2,7 +2,7 @@
 public class Medianof2SortedArrays {
 
 	public static void main(String[] args) {
-		int[] arr1 = new int[]{1, 12, 15, 26, 38};
+		int[] arr1 = new int[]{1, 12, 17, 26, 38};
 		int[] arr2 = new int[]{2, 13, 17, 30, 45};
 		System.out.println("Median of both the arrays is "+median(arr1, arr2));
 		
@@ -22,7 +22,7 @@ public class Medianof2SortedArrays {
 				l2=m2;r1=m1;
 			}
 			else
-				return m1;
+				return arr1[m1];
 		}
 		
 		return (Math.max(arr1[l1], arr2[l2])+Math.min(arr1[r1], arr2[r2]))/2;

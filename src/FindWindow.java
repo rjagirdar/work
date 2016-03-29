@@ -44,10 +44,7 @@ public class FindWindow {
 				while(!needToFind.containsKey(beginChar) || hasFound.get(beginChar) > needToFind.get(beginChar)){
 					
 					if(hasFound.containsKey(beginChar) && needToFind.containsKey(beginChar)){
-					
-						if(hasFound.get(beginChar) > needToFind.get(beginChar)){
-							hasFound.put(beginChar, hasFound.get(beginChar)-1);
-						}
+						hasFound.put(beginChar, hasFound.get(beginChar)-1);
 					}
 					
 					begin++;

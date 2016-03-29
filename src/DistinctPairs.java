@@ -2,13 +2,13 @@
 public class DistinctPairs {
 	
 	public static void main(String[] args){
-		int[] arr= new int[] {1, 5, 3, 4, 2};
+		int[] arr= new int[] {1, 5, 6, 4, 2,3};
 		int distance=3;
 		sort(arr);
 		for(int item: arr){
-			System.out.println(item);
+			System.out.print(item+" ");
 		}
-		
+		System.out.println();
 		for(int i=0; i<arr.length-1; i++){
 			if(distance>arr[i]){
 				int index = binarySearch(arr, i, arr.length-1, distance+arr[i]);
@@ -46,17 +46,17 @@ public class DistinctPairs {
 	
 	public static int partition(int[] arr, int start, int end){
 		int pivot = arr[end];
-		int i=start-1;
+		int i=start;
 		
 		for(int j= start; j<end; j++){
 			if(arr[j] <= pivot){
-				i++;
 				swap(arr, i, j);
+				i++;
 			}
 		}
 		
-		swap(arr, i+1, end);
-		return i+1;
+		swap(arr, i, end);
+		return i;
 	}
 	
 	public static void quickSort(int[] arr, int start, int end){

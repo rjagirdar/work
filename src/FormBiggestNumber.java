@@ -4,8 +4,16 @@ import java.util.Comparator;
 
 
 public class FormBiggestNumber {
+	
+	
+	
+	
+	
 
 	public static void main(String[] args) {
+		
+		
+		
 		
 		ArrayList<CustomString> list = new ArrayList<CustomString>();
 		list.add(new CustomString(54));
@@ -18,7 +26,39 @@ public class FormBiggestNumber {
 		for(CustomString str : list)
 			builder.append(str.num);
 		System.out.println(builder.toString());
+		
+		System.out.println();
+		ArrayList<Integer> nlist = new ArrayList<Integer>();
+		nlist.add(54);
+		nlist.add(546);
+		nlist.add(548);
+		nlist.add(60);
+		
+		Collections.sort(nlist, comp);
+		
+		for(int val : nlist){
+			System.out.print(val);
+		}
+		
 	}
+	
+	private static Comparator<Integer> comp = new Comparator<Integer>() {
+		
+		@Override
+		public int compare(Integer o1, Integer o2) {
+			String str1 = o1.toString();
+			String str2 = o2.toString();
+			
+			String str1_2 = str1.concat(str2);
+			String str2_1 = str2.concat(str1);
+			
+			int num1 = Integer.valueOf(str1_2);
+			int num2 = Integer.valueOf(str2_1);
+			
+			
+			return num2-num1;
+		}
+	};
 
 }
 

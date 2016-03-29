@@ -3,11 +3,11 @@ public class LongestBitonicSubArray {
 	public static void main(String[] args){
 		int[] arr = new int[]{12, 4, 78, 90, 45, 23};
 		
-		arr=new int[]{10, 20, 30, 40};
+		//arr=new int[]{10, 20, 30, 40};
 		
-		arr=new int[]{40, 30, 20, 10};
+		//arr=new int[]{40, 30, 20, 10};
 		
-		arr=new int[]{10};
+		//arr=new int[]{10};
 		LBSubArray(arr);
 	}
 	

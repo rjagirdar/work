@@ -5,7 +5,7 @@ public class NextGreatestNumber {
 
 	public static void main(String[] args) {
 		int i = 534976;
-		i=4321;
+		//i=4321;
 		nextGreatest(new Integer(i).toString().toCharArray());
 		
 	}

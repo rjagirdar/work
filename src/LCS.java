@@ -3,10 +3,21 @@ public class LCS {
 
 	public static void main(String[] args) {
 		String str1 = "AGGTAB";
-		String str2 = "GXTXAYB";
-		lcs(str1,str2);
+		String str2 = "GTXAYB";
+		//lcs(str1,str2);
 		lcString(str1, str2);
 	}
+	
+	private static void printTable(int[][] table){
+		for (int i = 0; i < table.length; i++) {
+		    for (int j = 0; j < table[0].length; j++) {
+		        System.out.print(table[i][j] + "   ");
+		    }
+		    System.out.print("\n");
+		}
+		System.out.println("====================================================");
+	}
+	
 	
 	public static void lcString(String str1, String str2){
 		int[][] L = new int[str1.length()+1][str2.length()+1];
@@ -25,7 +36,7 @@ public class LCS {
 			}
 		}
 		
-
+		printTable(L);
 		System.out.println("Length of Longest Common String is "+L[str1.length()][str2.length()]);
 		StringBuilder builder = new StringBuilder();
 		int i=str1.length(); int j = str2.length();

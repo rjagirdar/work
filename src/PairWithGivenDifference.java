@@ -5,8 +5,8 @@ import java.util.HashSet;
 public class PairWithGivenDifference {
 
 	public static void main(String[] args) {
-		int arr[] = {1, 8, 30, 40, 100};
-		int diff = 60;
+		int arr[] = {8,4,2,6,12};
+		int diff = 4;
 		findPair(arr, diff);
 	}
 	

@@ -46,11 +46,13 @@ public class LRUCache {
 	public void setHead(DoubleLinkedListNode node) {
 		node.next = head;
 		node.pre = null;
+		
 		if (head != null) {
 			head.pre = node;
 		}
  
 		head = node;
+		
 		if (end == null) {
 			end = node;
 		}
@@ -69,7 +71,8 @@ public class LRUCache {
 				setHead(newNode);
 				map.put(key, newNode);
 				len++;
-			} else {
+			} 
+			else {
 				map.remove(end.key);
 				end = end.pre;
 				if (end != null) {

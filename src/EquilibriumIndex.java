@@ -6,7 +6,7 @@ public class EquilibriumIndex {
 		System.out.println(solution(arr));
 	}
 	
-public static int solution(int[] A) {
+	public static int solution(int[] A) {
         
         if(A.length == 0 || A.length == 1)
             return 0;

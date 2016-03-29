@@ -23,28 +23,33 @@ public class FindCharsinMatrix {
 	
 	public static boolean search(char[][] matrix, String str, int x, int y, int index){
 		
-		boolean returnVal = false;
+		
 		
 	/*	if(index == str.length()-1 && isValidDirection(matrix, x, y, str.charAt(index))){
 			return true;
 		}*/
 			
-		if(str.charAt(index) == matrix[x][y]){
+		//if(str.charAt(index) == matrix[x][y]){
 			if(index == str.length()-1)
 				return true;
+			
+			
+			
 			int[][] directions=new int[][]{{0,1},{1,0},{0,-1},{-1,0}};
 			for(int[] direction : directions){
 				int next_x = x+direction[0];
 				int next_y = y+direction[1];
 				
 				if(isValidDirection(matrix, next_x, next_y, str.charAt(index+1))){
-					returnVal = returnVal || search(matrix, str, next_x, next_y, index+1);
 					System.out.println("X= "+next_x+" Y= "+next_y+" char= "+str.charAt(index+1));
+					if(search(matrix, str, next_x, next_y, index+1))
+						return true;
+					
 				}
 			}
-		}
+		//}
 		
-		return returnVal;
+		return false;
 	}
 	
 	public static boolean isValidDirection(char[][] matrix, int x, int y, char nextChar){

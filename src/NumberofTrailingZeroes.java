@@ -2,7 +2,7 @@
 public class NumberofTrailingZeroes {
 
 	public static void main(String[] args) {
-		int n =100000;
+		int n =1000000;
 		System.out.println("Number of Trailing zeroes are "+getTrailingZeroesinFactorial(n));
 	}
 	

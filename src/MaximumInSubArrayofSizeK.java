@@ -6,12 +6,12 @@ public class MaximumInSubArrayofSizeK {
 
 	public static void main(String[] args) {
 		int[] arr = new int[]{78, 1, 12, 90, 57, 89, 56};
-		/*String str1="RAGHU";
+		String str1="RAGHU";
 		String str2 = "raghu";
 		str2=str2.toLowerCase();
 		System.out.println(str1.hashCode());
 		System.out.println(str2.hashCode());		
-		*/
+		
 		solution(arr, 3);
 	}
 	

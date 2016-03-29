@@ -46,19 +46,19 @@ public class NextPermutation {
     	// Swap a[k] with a[l].
     	swap(array, i++, j);
     	
-    	System.out.println("============================================================");
+    	/*System.out.println("============================================================");
     	for(int temp : array)
     		System.out.print(temp+" ");
-    	System.out.println();
+    	System.out.println();*/
     	// Reverse the sequence from a[k + 1] up to and including the final
     	// element a[n].
     	for (j = array.length - 1; j > i; i++, j--) {
     		swap(array, i, j);
     	}
-    	for(int temp : array)
+    	/*for(int temp : array)
     		System.out.print(temp+" ");
     	System.out.println();
-    	System.out.println("============================================================");
+    	System.out.println("============================================================");*/
     }
 
     public void swap(int[] array, int x, int y) {
